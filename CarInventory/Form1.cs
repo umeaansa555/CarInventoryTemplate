@@ -30,10 +30,17 @@ namespace CarInventory
 
             outputLabel.Text = "";
 
-            for (int i = 0; i < cars.Count; i++)
+            //for loop is ok but try using a foreach loop:
+            foreach (Car car in cars)
+            {
+               outputLabel.Text += $"  {car.year}  {car.make}  {car.color}  {car.mileage}\n";
+            }
+
+
+            /*for (int i = 0; i < cars.Count; i++)
             {
                 outputLabel.Text += $"{cars[i].make} {cars[i].color}\n";
-            }
+            } */
 
             /* newCar.year = year;
 
